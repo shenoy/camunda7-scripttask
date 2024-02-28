@@ -1,0 +1,3 @@
+statuy == 'closed'
+
+println statuy

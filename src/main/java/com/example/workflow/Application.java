@@ -18,8 +18,9 @@ public class Application implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
    RuntimeService rs = ProcessEngines.getDefaultProcessEngine().getRuntimeService();
-    Map<String, Object> variables = new HashMap<String, Object>();
-    variables.put("inputArray", new Integer[]{5, 23, 42});
+
+      Map<String, Object> variables = new HashMap<String, Object>();
+      variables.put("inputArray", new Integer[]{5, 23, 42});
     rs.startProcessInstanceByKey("my-script-task-process", variables);
 
   }
